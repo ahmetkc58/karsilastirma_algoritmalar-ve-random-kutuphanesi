@@ -64,10 +64,10 @@ public class RASTGELE {
             System.out.println(a[i]);
         }
     }
-
+                //bubble shortun mantığı birbirlerine sınırı olan elemanlar karşılaştırılır 
     public static int[] bubble(int a[]) {//bubble sort kulanmamız için yazdığımız bir metot 
         for (int i = 0; i < a.length; i++) {//eleman sayısı kadar tekrar etmesi gerekmektedir
-            for (int j = i; j < a.length - 1; j++) {//son elemandan sonra bir eleman olmayacağı için -1 koyduk 
+            for (int j = 0; j < a.length - 1; j++) {//son elemandan sonra bir eleman olmayacağı için -1 koyduk 
                 if (a[j] > a[j + 1]) {
                     int x = a[j + 1];
                     a[j + 1] = a[j];
@@ -77,7 +77,7 @@ public class RASTGELE {
         }
         return a;
     }
-
+        //selection shortun mantığı bir elemanı elimizde diğer elimizlede geri kalan elemanları turlarız
     public static int[] selection(int[] a) {//selection sort unu kulanmamız için metotu yazdık 
         for (int i = 0; i < a.length; i++) {//elimizde tutacağımız elemanı gezdirmek için kulandık
             for (int j = 0; j < a.length; j++) {// elimizde elemanı tutarken diyer elemanları gezmek için kulandık 
@@ -90,7 +90,7 @@ public class RASTGELE {
         }
         return a;
     }
-
+                // comb shortun mantığı şu şekildedir dizideki eleman sayısının yarısı kadar ilerdeki elemanla karşılaştırılır tüm veri seti daha sonra birer birer aralarındaki uzaklık azaltılarak hangisi daha büyükse yer değiştirilir küçükten büyüğe sıralanır 
     public static int[] comb(int a[]) { //comb sort unu kulanmak için bu metottan yardım aldık 
         for (int i = (a.length / 2); i > 0; i--) {
             for (int j = 0; j < a.length - i; j++) {
@@ -104,11 +104,12 @@ public class RASTGELE {
 
         return a;
     }
-
+// ınsectron shortun kısaca mantığı bi elimizle diziyi gezerken elimizde tuttuğumuz elemanı tuttuğumuz elemandna önceki sayılarla kıyaslayarak sıralar 
     public static int[] ınsectron(int[] a) {//ınsectron sort unu kulanmak için yazdık 
-        for (int i = 1; i < a.length; i++) {// burada  kıyaslayacağımız elemanın konumu buk-lmak için yazdık 
+        for (int i = 0; i <=a.length; i++) {// burada  kıyaslayacağımız elemanın konumu bulmak için yazdık 
             int e = i;// burada e yi kulanmamızın sebebi eğer elimizde tuttuğumuz eleman yerdeğiştirirse i yi değiştirmek yerine e yi değiştirmek for döngüsünü  bozmamış olur
             int j = i;//i den başlayık geriye doğru gider 
+            
             while (j >= 0) {
                 if (a[e] < a[j]) {
                     int x = a[e];
