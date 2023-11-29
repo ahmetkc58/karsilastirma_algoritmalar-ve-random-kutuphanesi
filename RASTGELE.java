@@ -67,7 +67,7 @@ public class RASTGELE {
 
     public static int[] bubble(int a[]) {//bubble sort kulanmamız için yazdığımız bir metot 
         for (int i = 0; i < a.length; i++) {//eleman sayısı kadar tekrar etmesi gerekmektedir
-            for (int j = 0; j < a.length - 1; j++) {//son elemandan sonra bir eleman olmayacağı için -1 koyduk 
+            for (int j = i; j < a.length - 1; j++) {//son elemandan sonra bir eleman olmayacağı için -1 koyduk 
                 if (a[j] > a[j + 1]) {
                     int x = a[j + 1];
                     a[j + 1] = a[j];
